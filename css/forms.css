@@ -1,0 +1,81 @@
+.floating-input {
+  width: 100%;
+  position: relative;
+  height: 56px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.floating-input input {
+  font-family: 'Play', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-color: #ecf1f7;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.floating-input label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #000;
+  top: 10px;
+  font-size: 12px;
+  transition: top 0.2s ease-in-out;
+}
+
+.floating-input input:focus {
+  background: #fff;
+  border: 1px solid grey;
+}
+
+/* Применяем стили к лейблу при фокусе на инпуте и когда инпут заполнен */
+.floating-input input:placeholder-shown + label { 
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  font-size: 16px;
+  color: #7e7f81;
+  transform: translateY(-50%);
+  transition: top 0.2s ease-in-out;
+}
+
+.floating-input input:focus + label {
+  color: #000;
+  top: 10px;
+  font-size: 12px;
+  transition: top 0.2s ease-in-out;
+}
+
+/* Скрыть placeholder по умолчанию */
+.floating-input input::placeholder {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Отобразить placeholder при фокусе на поле ввода */
+.floating-input input:focus::placeholder {
+  opacity: 1;
+}
+
+.floating-input input.is-invalid {
+  background: #fee0e0;
+}
+
+.floating-input .is-invalid-text {
+  position: absolute;
+  bottom: -20px;
+  font-size: 13px;
+  color: #f52222;
+}

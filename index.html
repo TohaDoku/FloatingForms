@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Floating Forms</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/forms.css">
+</head>
+<body>
+
+    <section>
+        <p>Обычные поля ввода:</p>
+
+            <div class="floating-input mb-3">
+              <input type="text" name="fullname" id="fullname" placeholder="Антон Докучаев">
+              <label for="fullname">Имя</label>
+            </div>
+
+            <div class="floating-input mb-3">
+              <input type="email" name="email" id="email" placeholder="antontdp@ya.ru">
+              <label for="email">Email</label>
+            </div>
+
+            <pre>
+<code>
+    &lt;div class="floating-input mb-3"&gt;
+        &lt;input type="text" name="fullname" id="fullname" placeholder="Антон Докучаев"&gt;
+        &lt;label for="fullname"&gt;Имя&lt;/label&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="floating-input mb-3"&gt;
+        &lt;input type="email" name="email" id="email" placeholder="antontdp@ya.ru"&gt;
+        &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;/div&gt;
+</code>
+              </pre>
+            
+            <div class="floating-input mb-3">
+              <input class="is-invalid" type="text" name="fullname" id="fullname" placeholder="Антон Докучаев">
+              <label for="fullname">Имя</label>
+              <div class="is-invalid-text">Укажите корректное имя</div>
+            </div>
+
+            <div class="floating-input mb-3">
+              <input class="is-invalid" type="email" name="email" id="email" placeholder="antontdp@ya.ru">
+              <label for="email">Email</label>
+              <div class="is-invalid-text">Укажите корректную электронную почту</div>
+            </div>
+
+            <hr>
+    </section>
+</body>
+</html>
