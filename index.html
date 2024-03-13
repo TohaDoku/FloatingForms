@@ -11,7 +11,8 @@
 <body>
 
     <section>
-        <p>Обычные поля ввода:</p>
+        <h2><u>Input</u></h2>
+        <p>Пустое поле:</p>
 
             <div class="floating-input mb-3">
               <input type="text" name="fullname" id="fullname" placeholder="Антон Докучаев">
@@ -23,20 +24,23 @@
               <label for="email">Email</label>
             </div>
 
-            <pre>
+<pre>
 <code>
     &lt;div class="floating-input mb-3"&gt;
         &lt;input type="text" name="fullname" id="fullname" placeholder="Антон Докучаев"&gt;
         &lt;label for="fullname"&gt;Имя&lt;/label&gt;
     &lt;/div&gt;
-    
+
     &lt;div class="floating-input mb-3"&gt;
         &lt;input type="email" name="email" id="email" placeholder="antontdp@ya.ru"&gt;
         &lt;label for="email"&gt;Email&lt;/label&gt;
     &lt;/div&gt;
 </code>
-              </pre>
-            
+</pre>
+
+<hr>
+
+<p>Не прошедшие валидацию:</p>
             <div class="floating-input mb-3">
               <input class="is-invalid" type="text" name="fullname" id="fullname" placeholder="Антон Докучаев">
               <label for="fullname">Имя</label>
@@ -49,7 +53,65 @@
               <div class="is-invalid-text">Укажите корректную электронную почту</div>
             </div>
 
-            <hr>
+<pre>
+<code>
+    &lt;div class="floating-input mb-3"&gt;
+      &lt;input class="is-invalid" type="text" name="fullname" id="fullname" placeholder="Антон Докучаев"&gt;
+      &lt;label for="fullname"&gt;Имя&lt;/label&gt;
+      &lt;div class="is-invalid-text"&gt;Укажите корректное имя&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="floating-input mb-3"&gt;
+      &lt;input class="is-invalid" type="email" name="email" id="email" placeholder="antontdp@ya.ru"&gt;
+      &lt;label for="email"&gt;Email&lt;/label&gt;
+      &lt;div class="is-invalid-text"&gt;Укажите корректную электронную почту&lt;/div&gt;
+    &lt;/div&gt;
+</code>
+</pre>
+
+<hr>
+
+<p>Прошедшие валидацию:</p>
+            <div class="floating-input is-valid mb-3">
+               <input type="text" name="fullname" id="fullname" value="Антон Докучаев" placeholder="Антон Докучаев">
+               <label for="fullname">Имя</label>
+             </div>
+            
+            <div class="floating-input is-valid mb-3">
+              <input type="email" name="email" id="email" value="antontdp@ya.ru" placeholder="antontdp@ya.ru">
+              <label for="email">Email</label>
+            </div>
+
+<pre>
+<code>
+&lt;div class="floating-input is-valid mb-3"&gt;
+   &lt;input type="text" name="fullname" id="fullname" value="Антон Докучаев" placeholder="Антон Докучаев"&gt;
+   &lt;label for="fullname"&gt;Имя&lt;/label&gt;
+&lt;/div&gt;
+ 
+&lt;div class="floating-input is-valid mb-3"&gt;
+   &lt;input type="email" name="email" id="email" value="antontdp@ya.ru" placeholder="antontdp@ya.ru"&gt;
+   &lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+<hr>
+<h2><u>Select</u></h2>
+<p>Выпадающий список:</p>
+<div class="floating-select">
+  <select id="floatingSelect">
+    <option selected disabled>Выбор</option>
+    <option value="1">Один</option>
+    <option value="2">Два</option>
+    <option value="3">Три</option>
+    <option value="4">Четыре</option>
+    <option value="5">Пять</option>
+  </select>
+  <label for="floatingSelect">Работает с элементом выбора</label>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
     </section>
 </body>
 </html>
